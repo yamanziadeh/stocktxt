@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Stock Tracker will send periodic text messages to the user informing them of important news, sentiments, and information about their chosen stocks">
+    <meta name="keywords" content="stocks, stock trading, trading, stock tracker, trading platform">
+    <title>Stock Tracker | Home</title>
+
+    <link rel="stylesheet" href="messages.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <%- include('./partials/messages.ejs') %>
+    <div id="header">
+        <h1>StockTxt</h1>
+        <div id="dashboard">
+            <h3>Welcome <%= locals.user.username %></h3>
+            <br />
+            <form action="logout" method="POST">
+                <input type="submit" value="Logout">
+            </form>
+        </div>
+    </div>
+
+    <!-- JS Files -->
+    <script src="main.js"></script>
+</body>
+
+</html>

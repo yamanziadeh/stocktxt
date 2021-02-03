@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Stock Tracker will send periodic text messages to the user informing them of important news, sentiments, and information about their chosen stocks">
+    <meta name="keywords" content="stocks, stock trading, trading, stock tracker, trading platform">
+    <title>StockTxt | Home</title>
+
+    <link rel="stylesheet" href="messages.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <%- include('./partials/messages.ejs') %>
+    <div id="header">
+        <h1>StockTxt</h1>
+        <p>A Daily Text of the Most Profitable S&P500 Stocks</p>
+        <div id="buttons">
+            <button id="loginBtn" type="button" onclick="location.href='/login'">
+                <img src="loginIcon.svg" alt="loginIcon">
+                Login
+            </button>
+            <button id="registerBtn" type="button" onclick="location.href='/signup'">
+                <img src="registerIcon.svg" alt="registerIcon">
+                Register
+            </button>
+        </div>
+        <!--<button id="scrollDown">
+            <img src="downArrow.png" alt="">
+        </button>-->
+
+    </div>
+
+    <!-- Buy me a Coffee 
+    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button"
+        data-slug="yamanziadeh" data-color="#ffffff" data-emoji="" data-font="Lato" data-text="Buy me a coffee!"
+        data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00"></script>
+    -->
+    <!-- JS Files -->
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+#errorMsg{
+    background-color: rgb(218, 72, 72);
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0;
+}
+
+#successMsg{
+    background-color: rgb(67, 204, 49);
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0;
+}
