@@ -7,8 +7,6 @@ from dateutil.relativedelta import relativedelta
 import time
 import threading
 
-# "https://finance.yahoo.com/quote/%5EIXIC/components?p=%5EIXIC"
-
 
 def read_link():
     table = pd.read_html(
