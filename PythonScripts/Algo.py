@@ -29,7 +29,7 @@ def read_link():
     ret12['quintile'] = pd.qcut(ret12.iloc[:, 1], 6, labels=False)
 
     winners = ret12[ret12.quintile == 4]
-    losers = ret12[ret12.quintile == 0]
+    # losers = ret12[ret12.quintile == 0]
 
     winnerret = mtl_ret.loc[formation +
                             relativedelta(months=1), df.columns.isin(winners.Symbols)]
