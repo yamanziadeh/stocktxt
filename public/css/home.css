@@ -122,21 +122,67 @@ div#cashback div#content{
     text-align: center;
     color: white;
 }
+div#cashback div#content p{
+    margin-top: 35px;
+    text-shadow: 0px 0px 100px var(--primary-color);
+}
 div#cashback img{
     margin-top: 10px;
     width: 173.88px;
     height: 305.67px;
 }
-div#cashback div#content p{
-    margin-top: 35px;
-    text-shadow: 0px 0px 100px var(--primary-color);
-}
 div#cashback img[src="cashRight.svg"]{
   float: right;
 }
-div#cashback span{
-    color: var(--primary-color);
+
+/* Footer */
+div#footer{
+    position: relative;
+    width: 548.42px;
+    height: 272.35px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    margin-top: 237.7px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-div#cashback img, div#cashback div{
-    display: inline-block;
+div#footer button{
+    margin-top: 30px;
+    height: 63px;
+    width: 183px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+div#footer p{
+    font-size: 25px;
+    font-weight: bold;
+}
+div#footer div{
+    position: relative;
+    height: auto;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+section:last-of-type{
+    text-align: center;
+    padding-bottom: 100px;
+}
+section:last-of-type ul {
+    margin-top: 133.7px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+section:last-of-type ul li{
+    display: inline;
+    color: white
+}
+section:last-of-type ul li a{
+    text-decoration: none;
+    color: white
 }
