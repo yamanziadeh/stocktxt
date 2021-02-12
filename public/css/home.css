@@ -1,6 +1,9 @@
 section:nth-of-type(2){
     margin-top: 100px;
 }
+section:not(:nth-of-type(1)){
+    height: auto;
+}
 
 /* Header */
 #header{
@@ -78,18 +81,9 @@ div#info{
     top: 50%;
     transform: translateY(-50%);
 }
-#info h2{
-    color: var(--primary-color);
-    font-weight: bold;
-    text-shadow: 0px 0px 100px var(--primary-color);
-    font-size: 30px;
-}
+
 #info p{
-    margin-top: 30px;
-    line-height: 35px;
-    color: white;
-    font-size: 25px;
-    font-weight: normal;
+    margin-top: 20px;
 }
 #info button{
     position: relative;
@@ -117,3 +111,32 @@ div#info{
     width: 512px;
 }
 
+/* Money Back */
+div#cashback{
+    margin-top: 237.7px;
+    display: grid;
+    grid-template-columns: auto 512px auto;
+    width: 100%;
+}
+div#cashback div#content{
+    text-align: center;
+    color: white;
+}
+div#cashback img{
+    margin-top: 10px;
+    width: 173.88px;
+    height: 305.67px;
+}
+div#cashback div#content p{
+    margin-top: 35px;
+    text-shadow: 0px 0px 100px var(--primary-color);
+}
+div#cashback img[src="cashRight.svg"]{
+  float: right;
+}
+div#cashback span{
+    color: var(--primary-color);
+}
+div#cashback img, div#cashback div{
+    display: inline-block;
+}
