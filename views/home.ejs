@@ -9,31 +9,80 @@
     <meta name="keywords" content="stocks, stock trading, trading, stock tracker, trading platform">
     <title>StockTxt | Home</title>
 
-    <link rel="stylesheet" href="messages.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="messages.css">
+    <link rel="stylesheet" href="coffee.css">
 </head>
 
 <body>
     <%- include('./partials/messages.ejs') %>
-    <div id="header">
-        <h1>StockTxt</h1>
-        <p>A Daily Text of the Most Profitable S&P500 Stocks</p>
-        <div id="buttons">
-            <button id="loginBtn" type="button" onclick="location.href='/login'">
-                <img src="loginIcon.svg" alt="loginIcon">
-                Login
-            </button>
-            <button id="registerBtn" type="button" onclick="location.href='/signup'">
-                <img src="registerIcon.svg" alt="registerIcon">
-                Register
+    <section>
+        <div id="header">
+            <h1>StockTxt</h1>
+            <p>The Most Profitable Stocks sent directly to You!</p>
+            <div id="buttons">
+                <button id="loginBtn" type="button" onclick="location.href='/login'">
+                    <img src="loginIcon.svg" alt="loginIcon">
+                    Login
+                </button>
+                <button id="registerBtn" type="button" onclick="location.href='/signup'">
+                    <img src="registerIcon.svg" alt="registerIcon">
+                    Register
+                </button>
+            </div>
+            <button id="scrollDown">
+                <img src="downArrow.svg" alt="">
             </button>
         </div>
-        <!--<button id="scrollDown">
-            <img src="downArrow.png" alt="">
-        </button>-->
-
-    </div>
-
+    </section>
+    <section>
+        <div id="info">
+            <div id="gridSection">
+                <div id="content">
+                    <div>
+                        <h2>Monthly Predictions!</h2>
+                        <p>A monthly text of the predicted top-performing stocks for the upcoming month through accurate
+                            algorithms!</p>
+                        <button>Read More!</button>
+                    </div>
+                </div>
+                <div id="imgContainer">
+                    <img src="desktopInfo.svg" alt="">
+                </div>
+            </div>
+            <div id="gridSection">
+                <div id="imgContainer">
+                    <img id="secondImg" src="earningsInfo.svg" alt="">
+                </div>
+                <div id="content">
+                    <div id="secondContent">
+                        <h2>Weekly Earnings!</h2>
+                        <p>A weekly text of the upcoming earnings of top S&P500 stocks. Earnings tend to cause a
+                            dramatic
+                            shift
+                            in stock prices!</p>
+                        <button>Read More!</button>
+                    </div>
+                </div>
+            </div>
+            <div id="gridSection">
+                <div id="content">
+                    <div>
+                        <h2>Daily Sentiments!</h2>
+                        <p>A daily pre-market text of the top 5 S&P500 Stocks with the highest sentiment ratings on all
+                            social
+                            media platforms!</p>
+                        <button>Read More!</button>
+                    </div>
+                </div>
+                <div id="imgContainer">
+                    <img src="sentimentInfo.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section></section>
     <!-- Buy me a Coffee 
     <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button"
         data-slug="yamanziadeh" data-color="#ffffff" data-emoji="" data-font="Lato" data-text="Buy me a coffee!"
