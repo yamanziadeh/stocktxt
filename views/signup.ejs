@@ -9,21 +9,33 @@
     <meta name="keywords" content="stocks, stock trading, trading, stock tracker, trading platform">
     <title>StockTxt | Signup</title>
 
-    <link rel="stylesheet" href="messages.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="messages.css">
+    <link rel="stylesheet" href="loginRegister.css">
+    <link rel="stylesheet" href="coffee.css">
 </head>
 
 <body>
     <%- include('./partials/messages.ejs') %>
-    <div id="header">
-        <h1>Sign Up</h1>
-        <form action="signup" method="POST">
-            <input placeholder="Username" type="text" name="username" id="username" required><br /><br />
-            <input placeholder="Phone Number" type="text" name="phonenumber" id="phonenumber" required><br /><br />
-            <input placeholder="Password" type="password" name="password" id="password" required><br /><br />
-            <input type="submit">
-        </form>
-    </div>
+    <section>
+        <div id="header">
+            <h1>StockTxt</h1>
+        </div>
+        <div id="register" class="form">
+            <form action="signup" method="POST">
+                <input placeholder="Full Name" type="text" name="username" id="username" required><br />
+                <input placeholder="Phone Number" type="text" name="phonenumber" id="phonenumber" required><br />
+                <input placeholder="Password" type="password" name="password" id="password" required><br />
+                <a href="login">Already have an account?</a>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </section>
+
+    <!-- Coffee -->
+    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button"
+        data-slug="yamanziadeh" data-color="#ffffff" data-emoji="" data-font="Lato" data-text="Buy me a coffee!"
+        data-outline-color="white" data-font-color="#000000" data-coffee-color="#FFDD00"></script>
 
     <!-- JS Files -->
     <script src="main.js"></script>

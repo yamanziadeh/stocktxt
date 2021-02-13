@@ -11,7 +11,7 @@ router.get("/signup", (req, res) => {
 
 router.post("/signup", (req, res) => {
     User.exists({ phonenumber: req.body.phonenumber }, (err, result) => {
-        if (result == true || err) return res.render("signup", { errorMessage: "User already exists!" });
+        if (result == true || err) return res.render("signup", { errorMessage: "Account already exists!" });
         var newUser = new User({
             phonenumber: req.body.phonenumber,
             username: req.body.username,
@@ -22,10 +22,10 @@ router.post("/signup", (req, res) => {
         client.messages.create({
             to: "+1" + req.body.phonenumber,
             from: process.env.TWILIO_PHONENUM,
-            body: `Thank you ${req.body.username} for signing up!`
+            body: `[StockTxt] Thank you ${req.body.username} for signing up!`
         }).then((message) => console.log(message)).catch((err) => console.log(err));
 
-        res.render("signup", { successMessage: "User created!" });
+        res.render("signup", { successMessage: "Account created, You can now Login!" });
     })
 })
 

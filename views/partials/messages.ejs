@@ -1,10 +1,10 @@
 <% if (locals.errorMessage){ %>
-<div id="errorMsg">
-    <p>Error: <%= errorMessage %></p>
+<div class="msg" id="errorMsg">
+    <p><%= errorMessage %></p>
 </div>
 <%}%>
     <% if (locals.successMessage){ %>
-<div id="successMsg">
-    <p>Success: <%= successMessage %></p>
+<div class="msg" id="successMsg">
+    <p><%= successMessage %></p>
 </div>
 <%}%>

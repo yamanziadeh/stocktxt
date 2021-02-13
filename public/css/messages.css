@@ -1,15 +1,19 @@
+.msg{
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    padding: 5px;
+}
+.msg p{
+    font-size: 18px !important;
+    font-weight: bold;
+}
 #errorMsg{
     background-color: rgb(218, 72, 72);
     color: white;
-    font-weight: bold;
-    padding: 5px;
-    margin: 0;
+    
 }
-
 #successMsg{
-    background-color: rgb(67, 204, 49);
+    background-color: var(--primary-color);
     color: white;
-    font-weight: bold;
-    padding: 5px;
-    margin: 0;
 }
