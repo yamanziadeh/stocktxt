@@ -6,6 +6,7 @@ var express = require("express"),
     User = mongoose.model('User');
 
 router.get("/login", (req, res) => {
+    if (req.session.user) return res.redirect("dashboard");
     res.render("login");
 })
 
