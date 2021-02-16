@@ -149,7 +149,7 @@ div#cashback div#content{
 }
 div#cashback div#content p{
     margin-top: 35px;
-    text-shadow: 0px 0px 100px var(--primary-color);
+    /*text-shadow: 0px 0px 100px var(--primary-color);*/
 }
 div#cashback img{
     margin-top: 10px;

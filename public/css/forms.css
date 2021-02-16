@@ -4,7 +4,10 @@ div#header{
     position: relative;
     margin-top: 75px;
 }
-
+div#header a{
+    text-decoration: none;
+    color: inherit;
+}
 div.form{
     position: relative;
     width: 524px;

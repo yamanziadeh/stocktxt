@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="messages.css">
     <link rel="stylesheet" href="forms.css">
-    <link rel="stylesheet" href="coffee.css">
+    <link rel="stylesheet" href="fixedElems.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 
     <section>
         <div id="header">
-            <h1>StockTxt</h1>
+            <h1><a href="/">StockTxt</a></h1>
         </div>
         <div id="login" class="form">
             <form action="login" method="POST">
@@ -32,10 +32,7 @@
         </div>
     </section>
 
-    <!-- Coffee -->
-    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button"
-        data-slug="yamanziadeh" data-color="#ffffff" data-emoji="" data-font="Lato" data-text="Buy me a coffee!"
-        data-outline-color="white" data-font-color="#000000" data-coffee-color="#FFDD00"></script>
+    <%- include('./partials/fixedElems.ejs') %>
 
     <!-- JS Files -->
     <script src="main.js"></script>
