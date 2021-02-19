@@ -2,6 +2,7 @@
     --bg-color: #1F1F1F;
     --primary-color: #6CD584;
     --secondary-color: #262626;
+    --text-color: white;
 }
 
 /*----------Fonts----------*/
@@ -53,6 +54,9 @@ body{
 button, input[type="submit"]{
     cursor: pointer;
 }
+button:focus, input:focus{
+    outline: none;
+}
 
 section{
     height: 100vh;
@@ -61,6 +65,7 @@ section{
     margin: auto;
     margin-top: 0px;
 }
+
 h1{
     color: var(--primary-color);
     font-weight: bolder;
@@ -76,11 +81,10 @@ h2{
 
 p{
     line-height: 35px;
-    color: white;
+    color: var(--text-color);
     font-size: 25px;
     font-weight: normal;
 }
-
 p span{
     color: var(--primary-color);
 }

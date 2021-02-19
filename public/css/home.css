@@ -11,17 +11,17 @@ section:last-of-type{
 }
 section:last-of-type ul {
     margin-top: 133.7px;
-    color: white;
+    color: var(--text-color);
     font-size: 20px;
     font-weight: bold;
 }
 section:last-of-type ul li{
     display: inline;
-    color: white
+    color: var(--text-color);
 }
 section:last-of-type ul li a{
     text-decoration: none;
-    color: white
+    color: var(--text-color);
 }
 
 /* Header */
@@ -42,7 +42,7 @@ section:last-of-type ul li a{
 #header p{
     position: relative;
     top: 20px;
-    color: white;
+    color: var(--text-color);
     font-size: 30px;
     font-weight: normal;
 }
@@ -54,10 +54,10 @@ section:last-of-type ul li a{
 
 #buttons button{
     height: 63px;
-    border: 1px solid white;
+    border: 1px solid var(--text-color);
     background-color: rgba(0,0,0,0);
     border-radius: 5px;
-    color: white;
+    color: var(--text-color);
     font-size: 20px;
     font-weight: bold;
     transition: .25s ease-out;
@@ -145,11 +145,10 @@ div#cashback{
 }
 div#cashback div#content{
     text-align: center;
-    color: white;
+    color: var(--text-color);
 }
 div#cashback div#content p{
     margin-top: 35px;
-    /*text-shadow: 0px 0px 100px var(--primary-color);*/
 }
 div#cashback img{
     margin-top: 10px;
@@ -178,7 +177,7 @@ div#footer button{
     border: none;
     border-radius: 5px;
     background-color: var(--primary-color);
-    color: white;
+    color: var(--text-color);
     font-size: 20px;
     font-weight: bold;
 }

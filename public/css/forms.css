@@ -2,6 +2,7 @@ div#header{
     width: 100%;
     text-align: center;
     position: relative;
+    display: inline-block;
     margin-top: 75px;
 }
 div#header a{
@@ -37,7 +38,7 @@ div.form form input{
     border-radius: 10px;
     width: 298px;
     height: 53px;
-    color: white;
+    color: var(--text-color);
     font-size: 20px;
     font-weight: normal;
 }

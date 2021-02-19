@@ -16,6 +16,7 @@ div#fixedElems button{
 div#fixedElems button img{
     width: 35px;
 }
+
 /* Coffee */
 div#Coffee{
     overflow: hidden !important;
@@ -28,18 +29,6 @@ div#Coffee{
     padding-right: 0 !important;
     transition: 0.15s ease-out;
 }
-/*
-.bmc-btn-container:hover{
-    width: 280px;
-    transition: 0.15s ease-out;
-}
-.bmc-btn-container:hover span{
-    font-family: Gilroy, sans-serif !important;
-    font-weight: normal;
-    width: 300px;
-    left: 60px;
-}
-*/
 .bmc-btn-container .bmc-btn-text{
     display: none;
 }
