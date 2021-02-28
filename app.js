@@ -9,17 +9,6 @@ var express = require('express'),
 require('dotenv').config();
 app.set("view engine", "ejs");
 
-// Python Script
-function parseEarnings(theStr) {
-    return theStr.split("$$$,").join("\n\n").slice(0, -4);
-}
-let options = {
-    mode: 'text',
-    pythonPath: '/Users/yamanziadeh/opt/miniconda3/bin/Python', // "/Users/yamanziadeh/opt/miniconda3/bin/Python"
-    pythonOptions: ['-u'],
-    scriptPath: 'PythonScripts',
-};
-
 // Connect to Twilio Account
 const client = require("twilio")(process.env.TWILIO_ACC_SID, process.env.TWILIO_TOKEN);
 
@@ -62,35 +51,40 @@ app.use(express.static('public/js'));
 // Controllers
 app.use(require('./Controllers/HomeController.js'))
 
-// Recurring Main Function
-schedule.scheduleJob('*/1 * * * *', function () {
-    // 5 astrixes, 6th on the left is optional (represents seconds), like shown belo
-    // */2 * * * * <-- every 2 minutes
-    // 0 0 0 * * * <-- every day at midnight
-    // 30 8 * * * <-- 8:30am - Market open time
-    // 30 8 * * 1 <-- 8:30am every monday (weekly)
-    // axios.get('https://socialsentiment.io/api/v1/stocks/sentiment/daily/', {
-    //     headers: {
-    //         Authorization: 'Token ' + process.env.SOC_SENT_TOKEN //the token is a variable which holds the token
-    //     }
-    // }).then(function (data) {
-    //     data.data.results.sort((a, b) => { return b.score - a.score });
-    //     var sentimentTxtBody = `** Top Stocks by Sentiment **\n${data.data.results[0].stock} ${data.data.results[1].stock} ${data.data.results[2].stock} ${data.data.results[3].stock} ${data.data.results[4].stock}`
-    //     PythonShell.run('Predictions.py', options, function (err, res) {
-    //         if (err) throw err;
-    //         var txtBody = `** Top Stocks this Month **\n${res}\n\n` + sentimentTxtBody;
-    //         UserModel.find({}).select('phonenumber').exec((err, result) => {
-    //             result.forEach(element => {
-    //                 client.messages.create({
-    //                     to: "+1" + element.phonenumber,
-    //                     from: process.env.TWILIO_PHONENUM,
-    //                     body: txtBody
-    //                 }).then(() => console.log("Update Sent to " + element.phonenumber)).catch((err) => console.log(err));
-    //             });
-    //         });
-    //     });
-    // }).catch(err => console.log(err.message));
+// Python Utils
+function parseEarnings(theStr) {
+    return theStr.split("$$$,").join("\n\n").slice(0, -4);
+}
+let options = {
+    mode: 'text',
+    pythonPath: '/Users/yamanziadeh/opt/miniconda3/bin/Python', // "/Users/yamanziadeh/opt/miniconda3/bin/Python"
+    pythonOptions: ['-u'],
+    scriptPath: 'PythonScripts',
+};
 
+// Daily Sentiment
+schedule.scheduleJob('0 0 * * *', function () { // Every day @ 00:00
+    axios.get('https://socialsentiment.io/api/v1/stocks/sentiment/daily/', {
+        headers: {
+            Authorization: 'Token ' + process.env.SOC_SENT_TOKEN //the token is a variable which holds the token
+        }
+    }).then(function (data) {
+        data.data.results.sort((a, b) => { return b.score - a.score });
+        var sentimentTxtBody = `** Daily Sentiment **\n${data.data.results[0].stock} ${data.data.results[1].stock} ${data.data.results[2].stock} ${data.data.results[3].stock} ${data.data.results[4].stock}`
+        UserModel.find({}).select('phonenumber').exec((err, result) => {
+            result.forEach(element => {
+                client.messages.create({
+                    to: "+1" + element.phonenumber,
+                    from: process.env.TWILIO_PHONENUM,
+                    body: sentimentTxtBody
+                }).then(() => console.log("Daily Sentiment Sent to " + element.phonenumber)).catch((err) => console.log(err));
+            });
+        });
+    }).catch(err => console.log(err.message));
+});
+
+// Weekly Earnings
+schedule.scheduleJob('0 8 * * 0', function () { // Every Sunday @ 8AM
     PythonShell.run('Earnings.py', options, function (err, res) {
         if (err) throw err;
         var txtBody = `** Weekly Earnings **\n${res}\n`;
@@ -101,7 +95,24 @@ schedule.scheduleJob('*/1 * * * *', function () {
                     to: "+1" + element.phonenumber,
                     from: process.env.TWILIO_PHONENUM,
                     body: txtBody
-                }).then(() => console.log("Update Sent to " + element.phonenumber)).catch((err) => console.log(err));
+                }).then(() => console.log("Weekly Earnings Sent to " + element.phonenumber)).catch((err) => console.log(err));
+            });
+        });
+    });
+});
+
+// Monthly Predictions
+schedule.scheduleJob('0 0 1 * *', function () { // Every First Day of the Month
+    PythonShell.run('Predictions.py', options, function (err, res) {
+        if (err) throw err;
+        var txtBody = `** Monthly Predictions **\n${res}\n`;
+        UserModel.find({}).select('phonenumber').exec((err, result) => {
+            result.forEach(element => {
+                client.messages.create({
+                    to: "+1" + element.phonenumber,
+                    from: process.env.TWILIO_PHONENUM,
+                    body: txtBody
+                }).then(() => console.log("Monthly Predictions Sent to " + element.phonenumber)).catch((err) => console.log(err));
             });
         });
     });
