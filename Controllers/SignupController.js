@@ -25,7 +25,7 @@ router.post("/signup", (req, res) => {
             client.messages.create({
                 to: "+1" + req.body.phonenumber,
                 from: process.env.TWILIO_PHONENUM,
-                body: `[StockTxt] Thank you ${req.body.username} for signing up!`
+                body: `[StockTxt] Thank you ${req.body.username} for signing up!\n\nYou can now login to access your dashboard where you will be able to toggle daily, weekly, or monthly texts on/off.`
             }).then((message) => console.log(message)).catch((err) => console.log(err));
 
             res.render("signup", { successMessage: "Account created, You can now Login!" });

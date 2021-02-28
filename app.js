@@ -118,6 +118,7 @@ schedule.scheduleJob('0 0 1 * *', function () { // Every First Day of the Month
     });
 });
 
+// Server Start
 app.listen(process.env.PORT, () => {
     console.log(`Listening on port ${process.env.PORT}...`);
 })
