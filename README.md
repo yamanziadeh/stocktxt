@@ -33,8 +33,9 @@ Implemented a momentum trading algorithm to predict the top-performing S&P500 st
 <img src="gitImgs/css.svg?raw=true" align="left" width="50" >
 <img src="gitImgs/nodejs.svg?raw=true" align="left" width="50" >
 <img src="gitImgs/mongodb.svg?raw=true" align="left" width="50" >
-<img src="gitImgs/python.svg?raw=true" align="left" width="50" >
-<br />
+<img src="gitImgs/python.svg?raw=true" width="50" >
+
+
 <!-- DESIGN -->
 ## Design
 ![Website Design](gitImgs/Design.png?raw=true "Design")
