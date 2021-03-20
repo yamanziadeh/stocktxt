@@ -29,11 +29,11 @@ A Full-stack Web Application that notifies authenticated users of daily stock se
 ## Details
 Implemented a momentum trading algorithm to predict the top-performing S&P500 stocks monthly, a web scraper to gather upcoming weekly earnings from yahoo finance, and daily stock sentiments collected from the SocialSentiment API.
 
-![HTML5](gitImgs/html.svg?raw=true | width=50) 
-![CSS3](gitImgs/css.svg?raw=true | width=50)
-![NODEJS](gitImgs/nodejs.svg?raw=true | width=50)
-![MONGODB](gitImgs/mongodb.svg?raw=true | width=50)
-![PYTHON](gitImgs/python.svg?raw=true | width=50)
+<img src="gitImgs/html.svg?raw=true" width="50" >
+<img src="gitImgs/css.svg?raw=true" width="50" >
+<img src="gitImgs/nodejs.svg?raw=true" width="50" >
+<img src="gitImgs/mongodb.svg?raw=true" width="50" >
+<img src="gitImgs/python.svg?raw=true" width="50" >
 
 <!-- DESIGN -->
 ## Design
