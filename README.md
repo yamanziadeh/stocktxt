@@ -1,3 +1,4 @@
+[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- INTRO. -->
@@ -61,5 +62,7 @@ Yaman Ziadeh - yamanbader@gmail.com
 
 Project Link: [https://github.com/yamanziadeh/stocktxt](https://github.com/yamanziadeh/stocktxt)
 
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/yaman-ziadeh/
