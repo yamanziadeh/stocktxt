@@ -1,0 +1,205 @@
+/* Sections */
+section{
+    &:nth-of-type(2){
+        margin-top: 50px;
+    }
+    &:not(:nth-of-type(1)){
+        height: auto;
+    }
+    &:last-of-type{
+        text-align: center;
+        padding-bottom: 100px;
+    }
+    &:last-of-type ul {
+        margin-top: 133.7px;
+        color: var(--text-color);
+        font-size: 20px;
+        font-weight: bold;
+    }
+    &:last-of-type ul li{
+        display: inline;
+        color: var(--text-color);
+    }
+    &:last-of-type ul li a{
+        text-decoration: none;
+        color: var(--text-color);
+    }
+}
+
+/* Header */
+#header{
+    position: relative;
+    display: block;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-60%);
+    height: 235px;
+    h1 {
+        color: var(--primary-color);
+        font-weight: bolder;
+        text-shadow: 0px 0px 100px var(--primary-color);
+        font-size: 66px;
+    }
+    p {
+        position: relative;
+        top: 20px;
+        color: var(--text-color);
+        font-size: 30px;
+        font-weight: normal;
+    }
+}
+
+#buttons{
+    position: relative;
+    top: 52px;
+    button {
+        height: 63px;
+        border: 1px solid var(--text-color);
+        background-color: rgba(0,0,0,0);
+        border-radius: 5px;
+        color: var(--text-color);
+        font-size: 20px;
+        font-weight: bold;
+        transition: .25s ease-out;
+        &:hover{
+            background-color: var(--primary-color);
+            transition: .25s ease-out;
+        }
+        &#loginBtn{
+            width: 169px;
+            margin-right: 15px;
+        }
+        &#registerBtn{
+            width: 183px;
+        }  
+    }
+
+    img{
+        position: relative;
+        right: 5px;
+        top: 1.5px;
+    }
+}
+
+button {
+    &#scrollDown, &#scrollDown img{
+        background: none;
+        border: none;
+    }
+    &#scrollDown{
+        position: relative;
+        top: 240px;
+        animation: bounce-3 ease-in-out 1.5s infinite;
+    }
+}
+
+@keyframes bounce-3 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Info */
+div#info{
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    row-gap: 150px;
+    grid-column: auto;
+    p{
+        margin-top: 20px;
+    }
+    button{
+        position: relative;
+        border: none;
+        background-color: var(--secondary-color);
+        width: 177.26px;
+        height: 57.92px;
+        border-radius: 5px;
+        color: rgba(255,255,255,.1); 
+        cursor: default;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 30px;
+        transition: .25s ease-out;
+    }
+    div#gridSection{
+        display: grid;
+        grid-template-columns: 512px auto;
+        div#content div{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    div#imgContainer img:not(#secondImg){
+        float:right;
+    }
+    div#secondContent{
+        float:right;
+        width: 512px;
+    }
+}
+
+/* Money Back */
+div#cashback{
+    margin-top: 237.7px;
+    display: grid;
+    grid-template-columns: auto 512px auto;
+    width: 100%;
+    div#content{
+        text-align: center;
+        color: var(--text-color);
+        p{
+            margin-top: 35px;
+        }
+    }
+    img{
+        margin-top: 10px;
+        width: 173.88px;
+        height: 305.67px;
+    }
+    img[src="cashRight.svg"]{
+        float: right;
+    }
+}
+
+
+/* Footer */
+div#footer{
+    position: relative;
+    width: 548.42px;
+    height: 272.35px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    margin-top: 237.7px;
+    left: 50%;
+    transform: translateX(-50%);
+    button {
+        margin-top: 30px;
+        height: 63px;
+        width: 183px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        font-size: 20px;
+        font-weight: bold;
+        img{
+            position: relative;
+            right: 5px;
+            top: 1.5px;
+        }
+    }
+    p {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    div {
+        position: relative;
+        height: auto;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

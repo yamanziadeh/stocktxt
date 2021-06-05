@@ -1,0 +1,56 @@
+div#fixedElems{
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+}
+div#fixedElems button{
+    width: 70px;
+    height: 60px;
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1px 0.5px !important;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    background-color: white;
+
+}
+div#fixedElems button img{
+    width: 35px;
+}
+
+/* Coffee */
+div#Coffee{
+    overflow: hidden !important;
+    width: 70px;
+    height: 60px;
+}
+.bmc-btn-container {
+    width: 70px;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    transition: 0.15s ease-out;
+}
+.bmc-btn-container .bmc-btn-text{
+    display: none;
+}
+.bmc-btn-container .bmc-btn{
+    background-color: white!important;
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1px 0.5px !important;
+    padding-right: 0 !important;
+    min-width: 100% !important;
+}
+.bmc-btn-container .bmc-btn svg path{
+    fill: var(--primary-color) !important;
+}
+.bmc-btn-container .bmc-btn svg path.logo-outline{
+    fill: black!important;
+}
+.bmc-btn-container span{
+    color: black !important;
+    position: absolute !important;
+    margin-top: 4px;
+    width: 200px;
+    left: 75px;
+    font-family: Gilroy, sans-serif !important;
+    font-weight: normal;
+    transition: 0.15s ease-out;
+}

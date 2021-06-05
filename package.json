@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch public/scss -o public/css"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "mongoose": "^5.11.9",
+    "node-sass": "^6.0.0",
     "node-schedule": "^1.3.2",
     "nodemon": "^2.0.6",
     "python-shell": "^2.0.3",

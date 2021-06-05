@@ -1,0 +1,90 @@
+:root{
+    --bg-color: #1F1F1F;
+    --primary-color: #6CD584;
+    --secondary-color: #262626;
+    --text-color: white;
+}
+
+/*----------Fonts----------*/
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-Regular.eot'); /* IE9 Compat Modes */
+    src: url('Gilroy-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('Gilroy-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('Gilroy-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+        url('Gilroy-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('Gilroy-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-Bold.eot'); /* IE9 Compat Modes */
+    src: url('Gilroy-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('Gilroy-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+        url('Gilroy-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+        url('Gilroy-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('Gilroy-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: 500;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-ExtraBold.eot'); /* IE9 Compat Modes */
+    src: url('Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('Gilroy-ExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
+        url('Gilroy-ExtraBold.woff') format('woff'), /* Pretty Modern Browsers */
+        url('Gilroy-ExtraBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('Gilroy-ExtraBold.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: 600;
+    font-style: bolder;
+}
+
+/*---------Generic---------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Gilroy, sans-serif;
+    background-color: var(--bg-color);
+}
+
+button, input[type="submit"]{
+    cursor: pointer;
+}
+button:focus, input:focus{
+    outline: none;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 0px;
+}
+
+h1{
+    color: var(--primary-color);
+    font-weight: bolder;
+    text-shadow: 0px 0px 100px var(--primary-color);
+    font-size: 66px;
+}
+h2{
+    color: var(--primary-color);
+    font-weight: bold;
+    text-shadow: 0px 0px 100px var(--primary-color);
+    font-size: 30px;
+}
+
+p{
+    line-height: 35px;
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: normal;
+}
+p span{
+    color: var(--primary-color);
+}

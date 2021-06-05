@@ -1,0 +1,117 @@
+/* TODO: Fix Safari Glitch, clean-up this code, and implement on/off functionality*/
+
+div#header{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-top: 75px;
+    font-weight: bold;
+}
+div#header a{
+    text-decoration: none;
+    color: inherit;
+}
+div.form{
+    position: relative;
+    width: 524px;
+    height: 504px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin-top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h3{
+    display: inline-block;
+    width: 100%;
+    color: var(--primary-color);
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+}
+p#userName{
+    color: white;
+    font-size: 20px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+div#toggleContainer{
+    margin-top: 28px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    height: 209px;
+    width: 298px;
+    row-gap: 25px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.toggle{
+    background-color: #2F2F2F;
+    box-sizing: content-box;
+    border-radius: 10px;
+}
+.toggle p.toggleTitle{
+    position: relative;
+    top: 50%;
+    transform: translateY(-45%);
+    padding-left: 18px;
+    font-size: 20px;
+    float: left;
+}
+.toggle button{
+    overflow: hidden;
+    float: right;
+    display: grid;
+    grid-template-columns: 55px auto;
+    height: 100%;
+    width: 116px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    background: none;
+    color: white;
+}
+.toggle button div{
+    height: 100%;
+}
+.toggle button p{
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+}
+button.on{
+    border-color: var(--primary-color);
+    transition: .25s ease-in-out;
+}
+button.on div#on{
+    background-color: var(--primary-color);
+    transition: .25s ease-in-out;
+}
+button.off{
+    border-color: #D85D5D;
+    transition: .25s ease-in-out;
+}
+button.off div#off{
+    background-color: #D85D5D;
+    transition: .25s ease-in-out;
+}
+form{
+    margin-top: 50px;
+    text-align: center;
+}
+form input{
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #D34141;
+}
