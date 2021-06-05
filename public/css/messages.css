@@ -1,19 +1,16 @@
-.msg{
-    font-weight: bold;
-    margin: 0;
-    text-align: center;
-    padding: 5px;
-}
-.msg p{
+.msg {
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  padding: 5px; }
+  .msg p {
     font-size: 18px !important;
-    font-weight: bold;
-}
-#errorMsg{
-    background-color: rgb(218, 72, 72);
-    color: white;
-    
-}
-#successMsg{
-    background-color: var(--primary-color);
-    color: var(--text-color);
-}
+    font-weight: bold; }
+
+#errorMsg {
+  background-color: #da4848;
+  color: white; }
+
+#successMsg {
+  background-color: var(--primary-color);
+  color: var(--text-color); }
