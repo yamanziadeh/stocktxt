@@ -7,7 +7,7 @@
   <h3 align="center">Stocktxt - Stock Prediction Web Application</h3>
 
   <p align="center">
-A Full-stack Web Application that notifies authenticated users of daily stock sentiments, weekly upcoming earnings, and monthly S&P500 predictions via SMS messaging through the Twilio API.
+A Full-stack Web Application that notifies authenticated users of daily stock sentiments, weekly upcoming earnings, and monthly S&P500 predictions via SMS messaging.
     <br />
     <a href="https://github.com/yamanziadeh/stocktxt"><strong>Explore the docs »</strong></a>
     <br />
